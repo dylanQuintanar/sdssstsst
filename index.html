@@ -1,0 +1,84 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="utf-8" />
+      <meta name="format-detection" content="telephone=no" />
+      <meta name="msapplication-tap-highlight" content="no" />
+      <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1,                               width=device-width" />
+      <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+
+      <title>SDSSSTSST</title>
+      <link rel="stylesheet" type="text/css" href="index.css" />
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+
+  </head>
+
+  <body>
+    <h1>SDSSSTSST</h1>
+    <!--this id creates the infoBox div that includes the data from the mysql database -->
+    <div id="infoBox" class="row">
+        <ul>
+          <li>Estimated Wait Time: <span id="waitTime"></span> minutes</li>
+          <li>Current Section: <span id="currentSection"></span></li>
+          <li>Seats Remaining: <span id="total"></span></li>
+          <li >Time Until Kickoff: <span id="timeUntilKickoff"></span></li>
+          <li>Opponent: <span id="awayTeam"></span></li>
+        </ul>
+
+        <!--this class references the images, and allows them to be formatted on the screen-->
+        <div class="teamImage">
+          <img id="homeImage" src="">
+        </div>
+        <div class="teamImage"><h1>VS</h1></div>
+        <div class="teamImage">
+          <img id="awayImage" src="">
+        </div>
+    </div>
+
+    <!-- this id creates the map div, which allows a modal window to be opened with a map image-->
+    <div id="map">
+      <button id="myBtn">Open Map</button>
+      <div id="myModal" class="modal">
+      	<div class="modal-content">
+      		<span class="close">Close</span>
+      		<img src="stadiumMap.jpg"></img>
+      	</div>
+
+      </div>
+
+      <!--this button adds "1" to the number of sparky's pushups every time the button is pressed-->
+      <div id="pushups"><button onclick="doPushup()">Sparky's Pushups: <span id="number">0</span></button></div>
+
+
+    </div>
+
+    <!--this div creates the area for the stadium map that allows the images to be filled up based
+    upon the number of seats left available-->
+    <div id="stadiumMap">
+        <div id="northBar">
+          <h1>North End Zone</h1>
+          <p>Current Status:</p>
+          <p id="northStatus">Empty</p>
+    			<img src="endzone2NEW.png" class="statusBar" />
+          <p>Seats Remaining:</p>
+          <p id="northSeats"></p>
+        </div>
+        <div id="southBar">
+          <h1>South End Zone</h1>
+          <p>Current Status:</p>
+          <p id="southStatus">Empty</p>
+    			<img src="endzoneNEW.png" class="statusBar" />
+          <p>Seats Remaining:</p>
+          <p id="southSeats"></p>
+        </div>
+    </div>
+
+    <script src="mysql.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+    <script src="index.js"></script>
+  </body>
+</html>

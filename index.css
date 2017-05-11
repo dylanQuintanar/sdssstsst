@@ -1,0 +1,198 @@
+/*CSS*/
+
+
+* {
+			box-sizing: 		border-box;
+}
+
+/*Set text style for header*/
+h1 {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+	font-size: 16px
+}
+
+
+/*Set styles for info box and stadium map divs*/
+#infoBox, #stadiumMap {
+		font-family: 'Open Sans', sans-serif;
+		text-align: left;
+		border: 2px solid black;
+		border-radius: 15px;
+		width: 80%;
+		height: 375px;
+		margin: auto;
+		background-color: white;
+}
+
+
+/*Unique styling for infoBox div*/
+#infoBox {
+	height: 250px; /*Set div height*/
+	list-style: none; /*Set list style to none so no bullets are displayed */
+	font-size: 15px;
+}
+
+/*Set list styles*/
+ul{
+	list-style: none;
+
+}
+
+/*Set list styles*/
+li {
+	padding: 5px;
+	padding-left: 0px;
+	text-align: left;
+}
+
+
+/*Styling for the map and map button divs*/
+#map {
+	padding: 5%;
+	margin: auto;
+}
+
+#mapButton {
+	width: 100%;
+}
+
+#map button {
+	margin: auto;
+	text-align: center;
+	display: block;
+  clear: both;
+	margin: auto;
+	border: 2px solid black;
+    border-radius: 5px;
+	padding: 5px;
+	font-weight: 700;
+	font-size: 14px;
+	padding: 2%;
+	margin-bottom: 2px;
+}
+
+
+/*Status bars that display occupancy of student sections*/
+#northBar, #southBar {
+	width: 50%;
+	float: left;
+	max-width:100%;
+	max-height:100%;
+	padding-left: 26px;
+	font-size: 10px;
+
+}
+
+/*Styling for home and away team images*/
+#homeImage, #awayImage{
+	height: 35px;
+	padding-left: : 20px;
+}
+
+#homeImage {
+	padding-left: 65px;
+}
+
+.teamImage{
+	float: left;
+	width: 33%;
+	position: relative;
+}
+
+p.statusBar { text-align:center; padding:50px 0 0; }
+
+img.statusBar {
+    background-color:#f1f1f1;
+    background-position: 0px 700px;
+    background-repeat:no-repeat;
+  }
+
+  
+  
+  /*Styling for the image that is filled for the endzone statuses*/
+#stadiumMap h1 {
+	font-size: 13px;
+	text-align: left;
+}
+
+#northBar img{
+	background-image: url(gold.jpg);
+	height: 225px;
+}
+
+#southBar img{
+	background-image:url(maroon.jpg);
+	height: 225px;
+}
+/*End styling for the images that are filled for endzone status*/
+
+
+
+/*Modal Code */
+
+/*Set styles for the modal box itself*/
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+	padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+
+/*Set style for anything displayed in the modal box when it is not hidden*/
+.modal-content {
+	background-color: #fefefe;
+	margin: 15% auto;
+	padding:20px;
+	border: 1px solid #888;
+	width:80%;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.6s
+}
+
+
+
+/*Set Animations*/
+@-webkit-keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+
+/*Set Animations*/
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+
+
+/*Set style for close span*/
+.close {
+    color:  #aaa;
+	float: right;
+	font-weight: bold;
+	font-size: 75%;
+}
+
+
+/*Change close span when hovered over top of or focus is on the button*/
+.close:hover,
+.close:focus
+{
+	color: gold;
+	text-decoration: none;
+	curcor: pointer;
+	font-size: 75%;
+}
+/*End Modal Code */
